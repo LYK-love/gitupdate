@@ -39,11 +39,16 @@ func main() {
 		log.Fatal(err)
 	}
 
+	print(args[1]);
+	print(args[1:][0]);
+
+
 	if args[1:][0] == "." {
 		update(path, *topLevelOnly)
 	} else {
 		update(path+"/"+args[1:][0], *topLevelOnly)
 	}
+
 }
 
 // Track & update files in passed in path.
